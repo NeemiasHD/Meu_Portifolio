@@ -1,0 +1,734 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*variaveis: */
+:root {
+    --corMain: #FFDE00;
+
+    --corMain1: #FFDE00;
+    --corMain2: #FF597B;
+    --corMain3: #34B3F1;
+    --corMain4: white;
+    --darkCian: #111111;
+
+
+
+}
+
+.blur{ /*div que faz um blur quando o menu lateral vem*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+
+}
+
+/*fazendo o scroll ser suave*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+body {
+    background-color: var(--darkCian);
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color: rgb(238, 238, 238);
+}
+
+h1 {
+    color: rgb(238, 238, 238);
+}
+
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+}
+
+.sobre_e_habilidades a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(238, 238, 238);
+    /* Cor do underline */
+    transform: scaleX(0);
+    /* Começa com zero de largura para esconder */
+    transform-origin: bottom left;
+    /* Origem da transformação */
+    transition: transform 0.3s ease;
+    /* Adiciona a transição */
+}
+
+/* Efeito de transição quando o mouse passa sobre o link */
+.sobre_e_habilidades a:hover::before {
+    transform: scaleX(1);
+    /* Aumenta a largura para revelar o underline */
+}
+
+
+li {
+    list-style: none;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ul_outro_itens {
+    display: flex;
+    gap: 40px;
+}
+
+.ul_outro_itens a {
+    opacity: 0;
+    display: inline-block;
+    animation: slideTOP .5s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.ul_neemias p {
+    font-size: 25px;
+    color: var(--corMain);
+    cursor: default;
+    animation: slideRight .5s ease forwards;
+    display: inline-block;
+    opacity: 0;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.home_button a {
+    position: relative;
+    color: var(--corMain);
+
+}
+
+.home_button a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--corMain);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+
+.home_button a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/*3 listrinhas menu*/
+.listrinhas {
+    display: none;
+}
+
+.listrinhas i {
+    color: var(--corMain);
+    font-size: 40px;
+
+}
+
+.listras {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+
+}
+
+
+/*MAIN*/
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+
+}
+
+
+/*seção apresentação*/
+#apresentacao h1 {
+    color: rgb(238, 238, 238);
+    border: 3px solid var(--corMain);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 60px;
+    animation: slideRight .5s ease forwards;
+    display: inline-block;
+    opacity: 0;
+    animation-delay: calc(.2s *var(--i));
+
+}
+
+#apresentacao h3 {
+    color: white;
+    font-weight: 300;
+
+}
+
+#apresentacao p {
+    font-size: 20px;
+    font-weight: 300;
+    animation: slideRight .5s ease forwards;
+    display: inline-block;
+    opacity: 0;
+    animation-delay: calc(.2s *var(--i));
+}
+
+#apresentacao {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 600px;
+    height: 500px;
+    z-index: 2;
+}
+
+#imagem_apresentacao img {
+    border-radius: 50px;
+    border-bottom: 20px solid rgba(0, 0, 0, 0.5);
+    border-right: 20px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+
+}
+
+#imagem_apresentacao {
+    z-index: 2;
+    animation: slideLeft .5s ease forwards;
+    opacity: 0;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.icones i {
+    color: var(--corMain);
+    transition: all .3s;
+}
+
+.icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--corMain);
+    border-radius: 50px;
+    transition: all .3s;
+    opacity: 1;
+
+}
+
+.icones a:hover i {
+    color: black;
+}
+
+.icones a:hover {
+    background-color: var(--corMain);
+}
+
+.custom-shape-divider-bottom-1689889770 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.custom-shape-divider-bottom-1689889770 svg {
+    position: relative;
+    display: block;
+    width: calc(185% + 1.2px);
+    height: 300px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1689889770 .shape-fill {
+    fill: var(--corMain);
+
+}
+
+#mudar_de_cor {
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+}
+
+#mudar_de_cor i {
+    font-size: 40px;
+}
+
+.cor1 i {
+    color: var(--corMain1);
+
+}
+
+.cor2 i {
+    color: var(--corMain2);
+
+}
+
+.cor3 i {
+    color: var(--corMain3)
+}
+
+.cor4 i {
+    color: var(--corMain4)
+}
+
+
+
+
+
+
+
+
+/*main 2*/
+
+#main2 {
+    width: 100%;
+    background-color: var(--corMain);
+    display: flex;
+
+
+}
+
+.sobre_mim {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.sobre_mim p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    border-right: 15px solid black;
+    border-bottom: 15px solid black;
+}
+
+.sobre_mim h1 {
+    position: absolute;
+    top: 30px;
+    width: 400px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+
+}
+
+
+.todo_tablet {
+    display: flex;
+    position: relative;
+}
+
+
+/*Swipe*/
+.fotos {
+    top: 60px;
+    width: 700px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    padding: 30px;
+    z-index: 1;
+}
+
+
+.swiper {
+    width: 1100px;
+    height: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper-slide img {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    box-shadow: 1px 1px 10px 1px;
+}
+
+.tablet,
+.tablet2,
+.tablet3,
+.tablet4 {
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: 2;
+    top: -99px;
+    left: 125px;
+    pointer-events: none;
+    /*fazendo com que eu consiga mecher com o que tiver dentro do tablet*/
+}
+
+.tablet2,
+.tablet3,
+.tablet4 {
+    opacity: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    /*editando os swipes buttons, segundo o site*/
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-top-offset: 90%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: black;
+    border-radius: 10px;
+    transition: all .3s;
+    position: absolute;
+
+}
+
+.swiper-button-next:hover {
+    transform: scale(1.2);
+
+}
+
+.swiper-button-prev:hover {
+    transform: scale(1.2);
+
+}
+
+
+
+.swiper-pagination {
+    /*editando o pagination, segundo o site*/
+    --swiper-pagination-color: black;
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 8px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-top: 530px;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+    --swiper-pagination-progressbar-size: 4px;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 15px;
+    --swiper-pagination-bullet-height: 15px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+}
+
+
+
+
+
+
+
+
+
+/*MAIN 3*/
+
+#main3 {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloHabilidades {
+    text-align: center;
+    width: 400px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.polaroids {
+    display: flex;
+    gap: 80px;
+}
+
+.habilidade {
+    margin-bottom: 100px;
+    width: 255px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s;
+    text-align: center;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+}
+
+.habilidade i {
+    font-size: 100px;
+    color: var(--corMain);
+
+}
+
+.habilidade:hover {
+    transform: scale(1.1);
+}
+
+.habilidade p {
+    margin-top: 20px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.habilidade h1 {
+    color: #000;
+    font-weight: 300;
+}
+
+
+
+/*MAIN 4*/
+#main4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+
+
+/*botão de back to top*/
+.up {
+    position: fixed;
+    right: 1px;
+    bottom: -20px;
+    font-size: 60px;
+    background-color: transparent;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    opacity: 0;
+    color: #000000;
+
+}
+
+.up i {
+    background-color: var(--corMain);
+    border-radius: 20%;
+    border-right: 4px solid rgba(0, 0, 0, 0.274);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.274);
+}
+
+
+
+@media (max-width: 1280px) {
+
+    .todo_tablet {
+        display: none;
+    }
+
+    .polaroids {
+        gap: 0;
+        display: block;
+        justify-content: space-around;
+
+    }
+
+    .ul_outro_itens {
+        display: none;
+    }
+
+    .ul_outro_itens2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--corMain4);
+        z-index: 3;
+
+    }
+
+    .ul_outro_itens2 li {
+        padding-bottom: 100px;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .ul_outro_itens2 a {
+        color: #000;
+    }
+
+    /*3 listrinhas menu*/
+    .listrinhas {
+        display: flex;
+    }
+
+    .listrinhas i {
+        color: var(--corMain);
+        font-size: 40px;
+        z-index: 3;
+
+    }
+
+    .listras {
+        display: flex;
+        width: 0px;
+        transition: all .5s;
+        overflow: hidden;
+        z-index: 6;
+
+
+    }
+
+    .bx.bx-x {
+        font-size: 80px;
+        color: red;
+    }
+
+
+    #main2 {
+        width: 100%;
+        background-color: var(--corMain);
+        padding-bottom: 120px;
+
+
+    }
+
+    .sobre_mim h1 {
+        position: relative;
+        margin-bottom: 100px;
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    #imagem_apresentacao img{
+        width: 80%;
+        border: none;
+    }
+        .apreh1{
+            margin-left: 30px;
+            border: none;
+        }
+    
+}
+
+
+
+
+
+
+
+/*ANIMAÇÕES*/
+@keyframes slideTOP {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBotton {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(160px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
