@@ -36,13 +36,20 @@ listrinhas.onclick = function(){
 }
 
 let sairlistinhas = document.querySelector('.sairlistinhas');
-sairlistinhas.onclick = function () {
+let SairML = document.querySelector('.SairML');
+let SairML2 = document.querySelector('.SairML2');
+let SairML3 = document.querySelector('.SairML3');
+
+let sair_do_menulateral = function () {
     let listras = document.querySelector('.listras');
     listras.style.width = "0px";
     let blur = document.querySelector(".blur");
     blur.style.opacity = "0";
 };
-
+sairlistinhas.onclick = sair_do_menulateral;
+SairML.onclick = sair_do_menulateral;
+SairML2.onclick = sair_do_menulateral;
+SairML3.onclick = sair_do_menulateral;
 
 
 //MUDAR DE COR
