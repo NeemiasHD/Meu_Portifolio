@@ -30,7 +30,7 @@ var swiper = new Swiper(".mySwiper", {
 let listrinhas = document.querySelector('.listrinhas');
 listrinhas.onclick = function(){
   let listras = document.querySelector('.listras');
-  listras.style.width = "376px";
+  listras.style.width = "100%";
   let blur = document.querySelector('.blur');
   blur.style.opacity = "1";
 }
@@ -94,6 +94,8 @@ cor4.onclick = function () {
   changeimage(4);
 };
 
+
+
 //botão de voltar
 
 const goToTop = document.querySelector(".up");
@@ -115,6 +117,9 @@ goToTop.onclick = function () {
   });
 };
 
+
+
+
 //scroll reveal
 
 ScrollReveal({ reset: true }); // configuração padrão pra iniciar essa biblioteca
@@ -128,7 +133,7 @@ ScrollReveal().reveal(".hab", {
   duration: 1000,
 }); // duração de 1 minuto
 
-window.contato = ScrollReveal({ distance: "0px" }); // criando uma variavel contato para não bugar o site
+var contato = ScrollReveal({ distance: "0px" }); // criando uma variavel contato para não bugar o site
 
 contato.reveal("#main4 h1", {
   scale: 0.5,
