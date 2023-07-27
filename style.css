@@ -482,7 +482,11 @@ main {
 
 
 
-
+/* video youtube */
+iframe {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 
 /*MAIN 3*/
@@ -590,27 +594,27 @@ main {
 
     /*animação das letrinhas do menu*/
     .sobre_e_habilidades a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            bottom: 0;
-            left: 0;
-            background-color: rgb(0, 0, 0);
-            /* Cor do underline */
-            transform: scaleX(0);
-            /* Começa com zero de largura para esconder */
-            transform-origin: bottom left;
-            /* Origem da transformação */
-            transition: transform 0.3s ease;
-            /* Adiciona a transição */
-        }
-    
-        /* Efeito de transição quando o mouse passa sobre o link */
-        .sobre_e_habilidades a:hover::before {
-            transform: scaleX(1);
-            /* Aumenta a largura para revelar o underline */
-        }
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        /* Cor do underline */
+        transform: scaleX(0);
+        /* Começa com zero de largura para esconder */
+        transform-origin: bottom left;
+        /* Origem da transformação */
+        transition: transform 0.3s ease;
+        /* Adiciona a transição */
+    }
+
+    /* Efeito de transição quando o mouse passa sobre o link */
+    .sobre_e_habilidades a:hover::before {
+        transform: scaleX(1);
+        /* Aumenta a largura para revelar o underline */
+    }
 
 
 
@@ -734,9 +738,11 @@ main {
         margin-left: 20px;
         margin-right: 20px;
     }
-    #main2{
+
+    #main2 {
         padding-bottom: 250px;
     }
+
     .sobre_mim {
         width: 300px;
 
@@ -747,9 +753,19 @@ main {
 
     }
 
-    .tituloHabilidades{
+    .tituloHabilidades {
         width: 300px;
     }
+
+
+    iframe {
+        height: 169px;
+        width: 300px;
+    }
+
+
+
+
     #main4 {
         gap: 60px;
     }
