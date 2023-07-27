@@ -9,7 +9,7 @@
 
 /*variaveis: */
 :root {
-    --corMain: #FFDE00;
+    --corMain: white;
 
     --corMain1: #FFDE00;
     --corMain2: #FF597B;
@@ -410,7 +410,7 @@ main {
     width: 100%;
     height: 80%;
     object-fit: cover;
-    box-shadow: 1px 1px 10px 1px;
+    box-shadow: 1px 2px 10px;
 }
 
 .tablet,
@@ -426,9 +426,9 @@ main {
     /*fazendo com que eu consiga mecher com o que tiver dentro do tablet*/
 }
 
+.tablet,
 .tablet2,
-.tablet3,
-.tablet4 {
+.tablet3 {
     opacity: 0;
 }
 
