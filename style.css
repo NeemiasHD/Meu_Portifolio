@@ -125,11 +125,13 @@ nav {
     display: inline-block;
     opacity: 0;
     animation-delay: calc(.2s *var(--i));
+    transition: all .5s;
 }
 
 .home_button a {
     position: relative;
     color: var(--corMain);
+    transition: all .5s;
 
 }
 
@@ -144,6 +146,7 @@ nav {
     transform: scaleX(0);
     transform-origin: bottom left;
     transition: transform 0.3s ease;
+    transition: all .5s;
 }
 
 
@@ -160,6 +163,7 @@ nav {
 .listrinhas i {
     color: var(--corMain);
     font-size: 40px;
+    transition: all .5s;
 
 }
 
@@ -196,6 +200,7 @@ main {
     display: inline-block;
     opacity: 0;
     animation-delay: calc(.2s *var(--i));
+    transition: all .5s;
 
 }
 
@@ -269,6 +274,7 @@ main {
 
 .icones a:hover {
     background-color: var(--corMain);
+    transition: all .5s;
 }
 
 .custom-shape-divider-bottom-1689889770 {
@@ -291,6 +297,7 @@ main {
 
 .custom-shape-divider-bottom-1689889770 .shape-fill {
     fill: var(--corMain);
+    transition: all .5s;
 
 }
 
@@ -335,6 +342,7 @@ main {
     width: 100%;
     background-color: var(--corMain);
     display: flex;
+    transition: all .5s;
 
 
 }
@@ -423,6 +431,7 @@ main {
     top: -99px;
     left: 125px;
     pointer-events: none;
+    transition: all .5s;
     /*fazendo com que eu consiga mecher com o que tiver dentro do tablet*/
 }
 
@@ -430,6 +439,7 @@ main {
 .tablet2,
 .tablet3 {
     opacity: 0;
+    transition: all .5s;
 }
 
 .swiper-button-next,
@@ -484,8 +494,10 @@ main {
 
 /* video youtube */
 iframe {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: 10px solid var(--corMain);
+    transition: all .5s;
 }
 
 
@@ -532,6 +544,7 @@ iframe {
 .habilidade i {
     font-size: 100px;
     color: var(--corMain);
+    transition: all .5s;
 
 }
 
@@ -586,6 +599,7 @@ iframe {
     border-radius: 20%;
     border-right: 4px solid rgba(0, 0, 0, 0.274);
     border-bottom: 4px solid rgba(0, 0, 0, 0.274);
+    transition: all .5s;
 }
 
 
@@ -647,6 +661,7 @@ iframe {
         z-index: 3;
         width: 100%;
         overflow: hidden;
+        transition: all .5s;
 
     }
 
@@ -669,6 +684,7 @@ iframe {
         color: var(--corMain);
         font-size: 40px;
         z-index: 3;
+        transition: all .5s;
 
     }
 
@@ -695,6 +711,7 @@ iframe {
         width: 100%;
         background-color: var(--corMain);
         padding-bottom: 120px;
+        transition: all .5s;
 
 
     }
